@@ -14,6 +14,7 @@ class _FakeDB:
         return None
 
 
+@pytest.mark.unit
 @pytest.mark.asyncio
 async def test_redis_probe_uses_configured_redis_url():
     with patch("redis.from_url", return_value=MagicMock()) as from_url:
